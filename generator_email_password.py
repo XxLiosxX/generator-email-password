@@ -43,8 +43,9 @@ def run():
     1 - @gmail
     2 - @protonmail
     3 - @hotmail.com
+    4 - @yahoo.com
 
-    Elije una opción del (1 al 3): """
+    Elije una opción del (1 al 4): """
     opcion = int(input(menu))
     if opcion == 1:
         gmail = "@gmail.com"
@@ -82,8 +83,20 @@ def run():
         print("Tu nueva contraseña es: " + contrasena)
         print("======================================")
         resultado1 = ("Contraseña: " + contrasena)
+    elif opcion == 4:
+        yahoo = "@yahoo.com"
+        correo = generar_correo()
+        print("======================================")
+        print("Tu nuevo correo es: " + correo + yahoo)
+        print("======================================")
+        resultado = ("Correo: " + correo + yahoo)
+        contrasena = generar_contrasena()
+        print("======================================")
+        print("Tu nueva contraseña es: " + contrasena)
+        print("======================================")
+        resultado1 = ("Contraseña: " + contrasena)
     else:
-        print("Esta no es una opción valida")
+        print("Esta no es una opción valida😫")
     f = open("accounts_generator.txt", "a", encoding="utf-8")
     f.write(resultado+"\n")
     f.write(resultado1+"\n")
