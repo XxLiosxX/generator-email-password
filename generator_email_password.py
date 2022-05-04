@@ -38,17 +38,52 @@ def generar_contrasena():
 
 
 def run():
-    gmail = "@gmail.com"
-    correo = generar_correo()
-    print("======================================")
-    print("Tu nuevo correo es: " + correo + gmail)
-    print("======================================")
-    resultado = ("Correo: " + correo + "@" + gmail)
-    contrasena = generar_contrasena()
-    print("======================================")
-    print("Tu nueva contraseña es: " + contrasena)
-    print("======================================")
-    resultado1 = ("Contraseña: " + contrasena)
+    menu = """Bienvenido al generador de correo y contraseña
+
+    1 - @gmail
+    2 - @protonmail
+    3 - @hotmail.com
+
+    Elije una opción del (1 al 3): """
+    opcion = int(input(menu))
+    if opcion == 1:
+        gmail = "@gmail.com"
+        correo = generar_correo()
+        print("======================================")
+        print("Tu nuevo correo es: " + correo + gmail)
+        print("======================================")
+        resultado = ("Correo: " + correo + gmail)
+        contrasena = generar_contrasena()
+        print("======================================")
+        print("Tu nueva contraseña es: " + contrasena)
+        print("======================================")
+        resultado1 = ("Contraseña: " + contrasena)
+    elif opcion == 2:
+        protonmail = "@protonmail.com"
+        correo = generar_correo()
+        print("======================================")
+        print("Tu nuevo correo es: " + correo + protonmail)
+        print("======================================")
+        resultado = ("Correo: " + correo + protonmail)
+        contrasena = generar_contrasena()
+        print("======================================")
+        print("Tu nueva contraseña es: " + contrasena)
+        print("======================================")
+        resultado1 = ("Contraseña: " + contrasena)
+    elif opcion == 3:
+        hotmail = "@hotmail.com"
+        correo = generar_correo()
+        print("======================================")
+        print("Tu nuevo correo es: " + correo + hotmail)
+        print("======================================")
+        resultado = ("Correo: " + correo + hotmail)
+        contrasena = generar_contrasena()
+        print("======================================")
+        print("Tu nueva contraseña es: " + contrasena)
+        print("======================================")
+        resultado1 = ("Contraseña: " + contrasena)
+    else:
+        print("Esta no es una opción valida")
     f = open("accounts_generator.txt", "a", encoding="utf-8")
     f.write(resultado+"\n")
     f.write(resultado1+"\n")
