@@ -59,6 +59,9 @@ def run():
         print("Tu nueva contraseña es: " + contrasena)
         print("======================================")
         resultado1 = ("Contraseña: " + contrasena)
+        f = open("accounts_gmail.txt", "a", encoding="utf-8")
+        f.write(resultado+"\n")
+        f.write(resultado1+"\n")
     elif opcion == 2:
         protonmail = "@protonmail.com"
         correo = generar_correo()
@@ -70,7 +73,10 @@ def run():
         print("======================================")
         print("Tu nueva contraseña es: " + contrasena)
         print("======================================")
-        resultado1 = ("Contraseña: " + contrasena)
+        resultado2 = ("Contraseña: " + contrasena)
+        f = open("accounts_protonmail.txt", "a", encoding="utf-8")
+        f.write(resultado+"\n")
+        f.write(resultado2+"\n")
     elif opcion == 3:
         hotmail = "@hotmail.com"
         correo = generar_correo()
@@ -82,7 +88,10 @@ def run():
         print("======================================")
         print("Tu nueva contraseña es: " + contrasena)
         print("======================================")
-        resultado1 = ("Contraseña: " + contrasena)
+        resultado3 = ("Contraseña: " + contrasena)
+        f = open("accounts_hotmail.txt", "a", encoding="utf-8")
+        f.write(resultado+"\n")
+        f.write(resultado3+"\n")
     elif opcion == 4:
         yahoo = "@yahoo.com"
         correo = generar_correo()
@@ -94,12 +103,13 @@ def run():
         print("======================================")
         print("Tu nueva contraseña es: " + contrasena)
         print("======================================")
-        resultado1 = ("Contraseña: " + contrasena)
+        resultado4 = ("Contraseña: " + contrasena)
+        f = open("accounts_yahoo.txt", "a", encoding="utf-8")
+        f.write(resultado+"\n")
+        f.write(resultado4+"\n")
     else:
         print("Esta no es una opción valida😫")
-    f = open("accounts_generator.txt", "a", encoding="utf-8")
-    f.write(resultado+"\n")
-    f.write(resultado1+"\n")
+    
     firma = """
         ██╗      ██╗ █████╗  ██████╗ ██╗   ██╗ ██╗  ██╗    ██╗██╗ ██╗  ██╗ ███████╗ ██╗      ██╗       █████╗
         ██║      ██║ ██╔══██╗██╔════╝ ╚██╗██╔╝ ╚██╗██╔╝    ╚█║╚█║ ██║  ██║ ██╔════╝ ██║      ██║      ██╔══██╗
